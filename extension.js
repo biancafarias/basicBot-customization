@@ -12,7 +12,7 @@
         //Precaução para ter certeza de que foi atribuido corretamente.
         var bot = window.bot;
 
-        //Carregar configurações personalizadas abaixo. ↓
+        //Carregar configurações personalizadas abaixo.
         bot.retrieveSettings();
 
         /*
@@ -60,10 +60,13 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "basicBot",
         language: "portuguese",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true ou false
-        chatLink: "https://rawgit.com/" + fork + "/basicBot/master/lang/pt.json",
+        autowoot: true,
+        smartSkip: true,
+        cmdDeletion: true,
         maximumAfk: 120,
         afkRemoval: true,
         maximumDc: 60,
@@ -76,26 +79,27 @@
         maximumCycletime: 10,
         voteSkip: false,
         voteSkipLimit: 10,
+        historySkip: false,
         timeGuard: true,
         maximumSongLength: 10,
         autodisable: true,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        lockskipPosition: 3,
-        lockskipReasons: [
-        	["tema", "A música não se encaixa nos padrões da sala. "],
+        skipPosition: 3,
+        skipReasons: [
+        	["theme", "A música não se encaixa nos padrões da sala. "],
         	["op", "Essa música está na lista OP. "],
-        	["historico", "A música ainda está no histórico. "],
+        	["history", "A música ainda está no histórico. "],
         	["mix", "Você tocou um mix (muito longo) - não permitido. "],
-        	["som", "A música que você tocou tinha má qualidade ou estava sem som. "],
+        	["sound", "A música que você tocou tinha má qualidade ou estava sem som. "],
         	["nsfw", "A música que você tocou é NSFW (impróprio). "],
-        	["indisponivel", "A música que você tocou está indisponível. "]
+        	["unavailable", "A música que você tocou está indisponível. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
-        motd: "Mensagem temporária do dia",
+        motd: "Mensagem do dia",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
@@ -110,8 +114,9 @@
         songstats: true,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
+            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/OPlist.json",
+            BANNED: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/BANNEDlist.json"
         }
     }));
 
