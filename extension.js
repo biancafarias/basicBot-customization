@@ -58,11 +58,11 @@
     //Mudar as configurações padrões do bot e ter certeza que elas foram carregadas corretamente
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
+        botName: "Sejam bem vindos e se divirtam :) Um abraço do Kelvin",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
-        startupCap: 1, // 1-200
-        startupVolume: 0, // 0-100
+        startupCap: 10, // 1-200
+        startupVolume: 50, // 0-100
         startupEmoji: false, // true ou false
         autowoot: true,
         smartSkip: true,
@@ -97,9 +97,9 @@
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: false,
+        motdEnabled: true,
         motdInterval: 5,
-        motd: "Mensagem do dia",
+        motd: "!roulette",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
